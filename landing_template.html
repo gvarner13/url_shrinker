@@ -15,9 +15,8 @@
 
 <body>
 <main>
-    <h1>Welcome to Gary's personal URL shrinker</h1>
-    <h2>This is a side project, so it might not look great at first</h2>
-    <p>Soon there will be an input box to paste in your target url and then get a link to copy for use.</p>
+    <h1>URL shrinker</h1>
+    <h2>Wip side project</h2>
 </main>
 </body>
 
@@ -37,7 +36,11 @@
     }
 
     h1 {
-        color: var(--purple);
+        font-size: 90px;
+        background: linear-gradient(-45deg, var(--purple), #e73c6f, #2394d5, #2af3b7);
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     body {
@@ -47,10 +50,6 @@
         place-content: center;
         text-align: center;
         margin: 0;
-        --scale: 1;
-        scale: var(--scale);
-        /* transition: scale 0.2s; */
-        transition: scale 0.2s cubic-bezier(0.5, 1.5, 0.5, -0.5);
     }
 
 </style>
