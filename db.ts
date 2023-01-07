@@ -5,6 +5,7 @@ import {
 } from "https://deno.land/x/aws_sdk@v3.32.0-1/client-dynamodb/mod.ts";
 import "https://deno.land/std@0.170.0/dotenv/load.ts";
 import { Status } from "https://deno.land/std/http/http_status.ts";
+import { newUrl } from "./utils.ts";
 
 function getId() {
   const arr = new Uint8Array(8 / 2);
@@ -29,8 +30,8 @@ export async function saveLink(request) {
   try {
     if (request.body) {
       const body = await request.json();
-      url = body.url;
-      console.log(body);
+      url = newUrl(body.url);
+      console.log(url);
     }
     // When we want to interact with DynamoDB, we send a command using the client
     // instance. Here we are sending a PutItemCommand to insert the data from the
