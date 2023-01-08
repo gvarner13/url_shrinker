@@ -32,17 +32,7 @@ export async function handleRequest(req: Request, resp: any) {
     case "POST": {
       //check if the path is correct and then save to the db
       if (path !== "/shrink") return new Response(undefined, { status: 404 });
-      // addTarget(resp, target);
-      //   console.log({ req });
-      //   if (req.body) {
-      //     const body = await req.json();
-      //     console.log(body);
-      //   }
       return saveLink(req);
-      // return new Response(JSON.stringify({shortUrl: "https://gvarner.info/1234"}),
-      //     {status: Status.OK,
-      //         headers: {"content-type": 'application/json'}
-      //     })
       break;
     }
 

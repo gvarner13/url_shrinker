@@ -1,4 +1,4 @@
-export function newUrl(url: string) {
+export function newUrl(url: string): string {
   let absoluteUrl;
   try {
     absoluteUrl = new URL(url);

@@ -43,8 +43,6 @@ export async function saveLink(request) {
       new PutItemCommand({
         TableName: "Links",
         Item: {
-          // Here 'S' implies that the value is of type string
-          // and 'N' implies a number.
           id: { S: id },
           target: { S: url },
           shortLink: { S: id },
