@@ -6,7 +6,7 @@ export function newUrl(url: string): string {
     if (!absoluteUrl.hostname) {
       absoluteUrl = new URL("https://" + url);
     }
-  } catch (error) {
+  } catch (_error) {
     absoluteUrl = new URL("https://" + url);
   }
 
