@@ -1,5 +1,4 @@
 import { Status } from "https://deno.land/std/http/http_status.ts";
-import { saveLink, getLink } from "./db.ts";
 
 const template = await Deno.readTextFile("./landing_template.html");
 
@@ -25,14 +24,6 @@ export async function handleRequest(req: Request, resp: any) {
           },
         });
       }
-      return getLink(req);
-      break;
-    }
-
-    case "POST": {
-      //check if the path is correct and then save to the db
-      if (path !== "/shrink") return new Response(undefined, { status: 404 });
-      return saveLink(req);
       break;
     }
 
